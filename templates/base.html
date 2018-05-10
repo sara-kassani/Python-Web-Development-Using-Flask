@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    {% block head %}
+    <title> {% block title %}{% endblock%} - The Project Name </title>
+</head>
+    {% endblock %}
+<body>
+  <img src="{{url_for('static', filename='logo.png')}}" >
+    <h1>  The Project Name Website  </h1>
+    <div id="content">
+      {% block content %} {% endblock %}
+    </div>
+
+    <footer>
+      {% block footer %}
+        &copy, Copyright 2018 by <a href="#"> The project Name </a>
+      {% endblock %}
+    </footer>
+</body>
+</html>
